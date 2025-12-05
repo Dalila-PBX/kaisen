@@ -1,0 +1,528 @@
+/*=============BASE=============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  background-color: #F0F8FF;
+  overflow-x: hidden;
+}
+/* Solución para evitar desbordamiento horizontal por animaciones o filas de Bootstrap                              */
+main {
+  width: 100%;
+}
+/* Solución definitiva para el desbordamiento en todas las secciones */
+main > section {
+  width: 100%;
+  overflow-x: clip;
+}
+
+/*========== NAVBAR ========= */
+#header{ 
+  position: relative;
+  height: 90vh;
+}
+
+.header-content {
+  position: relative; /* Para que se ponga sobre la imagen con z-index */
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar{
+  margin-top: 2rem;
+}
+.navbar-logo {
+  height: 3rem; /* Altura para móviles */
+ 
+}
+
+.navbar-logo.logo-normal {
+  height: 2.7rem;
+}
+
+@media (min-width: 768px) { /* A partir de pantallas medianas (md) */
+  .navbar-logo.logo-normal {
+    height: 5.3rem; /* Altura para escritorio */
+  }
+}
+
+@media (min-width: 768px) { /* A partir de pantallas medianas (md) */
+  .navbar-logo {
+    height: 6rem; /* Altura para escritorio */
+  }
+}
+
+.navbar-nav{
+    column-gap: 2rem ;
+    
+}
+
+.nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255);
+  transition: color 0.4s;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+/* Estilos para el navbar cuando se hace scroll */
+.scroll-header {
+  position: fixed; /* Fija el navbar en la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;;
+  background-color: rgba(255, 255, 255, 0.95); 
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); 
+  z-index: 1000; 
+  transition: background-color 0.4s, box-shadow 0.4s; 
+  
+}
+
+.scroll-header .nav-link {
+  color: #0D2242; 
+}
+.scroll-header .navbar-logo.logo-white
+ {
+  display: none;
+}
+.scroll-header .navbar-logo.logo-normal {
+  display: block;
+}
+.navbar-logo.logo-normal {
+  display: none;
+}
+
+/* Cambia el color del ícono de hamburguesa a oscuro cuando se hace scroll */
+.scroll-header .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(13, 34, 66, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/*========== INICIO ========= */
+
+#section-inicio {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: start;
+}
+.header-background-img {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover; /* Esto hace que la imagen cubra todo el contenedor */
+    z-index: -1; /* La pone detrás del texto */
+}
+
+
+.home__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-top: 100px;
+  margin-bottom: 2rem;
+  color: white;
+  /* Mínimo 2.5em, idealmente 5vw, máximo 4.5em */
+  font-size: clamp(2.3em, 5vw, 4.5em);
+
+}
+
+.home__description {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 1px;
+   /* Mínimo 1em, idealmente 2.5vw, máximo 1.7em */
+  font-size: clamp(1em, 2.5vw, 1.6em);
+
+} 
+
+
+/*========== SOBRE NOSOTROS ========= */
+h1{
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2.3em, 5vw, 3.5em);
+}
+.lead{
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6em;
+  margin-top: 1.5em;
+  font-weight: 600;
+  font-size: clamp(1em, 2.5vw, 1.23rem);
+}
+
+/*========== SERVICIOS ========= */
+@media (min-width: 768px) {
+  .py-md-8 {
+    padding-top: 8rem !important;
+    /* padding-bottom: 8rem !important; */
+  }
+}
+
+.service-card {
+  text-align: center;
+}
+
+.service-card .card-img-top {
+  width: 90px; /* Ancho deseado para el ícono */
+  height: 90px; /* La altura se ajusta automáticamente */
+  object-fit: contain;
+  margin: 1.5rem auto 0; /* Margen: 1.5rem arriba, centrado horizontalmente, 0 abajo */
+}
+
+/* Para que el botón se alinee al fondo si las tarjetas tienen alturas diferentes */
+.service-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-title{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin:1rem;
+  
+
+}
+
+.card-text{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin:1.5rem;
+  
+}
+
+.btn-kaisen {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size:.9em;
+  letter-spacing: 1px;
+  background-color: #0D2242; /* El color de fondo que tú quieras */
+  color: #ffffff; 
+  padding: .2rem 2rem;            /* Color del texto, usualmente blanco */
+}
+
+.btn-kaisen:hover {
+  background-color: #14083f; /* Un tono un poco más oscuro para el efecto hover */
+  color: #ffffff;
+  
+}
+
+/*========== CLIENTES ========= */
+#clientes{ 
+  position: relative;
+  height: 60vh;
+}
+
+.clientes-background-img {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover; /* Esto hace que la imagen cubra todo el contenedor */
+    z-index: -1; /* La pone detrás del texto */
+  
+}
+
+
+
+
+/*========== OPINIONES ========= */
+
+#opiniones{
+  background-color: #ffffff;
+  padding:4rem 0;
+}
+
+
+#opiniones .card-text {
+  text-align: left; 
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.testimonial-card {
+  display: flex; 
+  flex-direction: row; 
+  align-items: start; 
+  padding: 1rem; 
+  background-color: #F0F8FF; 
+}
+
+
+
+
+
+
+.testimonial-img {
+  width: 80px; /* Ancho fijo para la imagen/logo */
+  height: auto;
+  border-radius: 50%; /* Hace la imagen redonda, ideal para logos o fotos */
+  object-fit: cover;
+  margin-right: 1.5rem; /* Espacio entre la imagen y el texto */
+}
+
+
+.marcas {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size:.9em;
+  letter-spacing: 1px;
+  color: #000; 
+}
+
+
+
+@media (max-width: 992px) {
+  .testimonial-card {
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .testimonial-img {
+    width: 100px; 
+    margin-right: 0; 
+    margin-bottom: 1rem; 
+  }
+
+  .testimonial-card .card-body {
+   
+    align-items: center;
+  }
+
+  #opiniones .card-text {
+    
+    text-align: center;
+  }
+}
+
+
+
+/*========== CONTACTO ========= */
+#contacto{ 
+  position: relative;
+  height: auto;
+  padding:8rem 0;
+}
+
+.contacto-background-img {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover; /* Esto hace que la imagen cubra todo el contenedor */
+    object-position: top; /* Alinea la imagen desde la parte superior */
+    z-index: -1; /* La pone detrás del texto */
+  
+}
+
+/* Estilos para el carrusel de logos */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Se mueve la distancia de los 4 logos originales */
+    transform: translateX(calc(-250px * 4));
+  }
+}
+
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%; /* Hacemos que ocupe todo el contenedor */
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 25s linear infinite;
+  display: flex;
+  /* El ancho es el de los 8 logos (4 originales + 4 duplicados) */
+  width: calc(250px * 8);
+}
+
+.slider .slide {
+  height:100px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.slider .slide img {
+  max-width: 100%;
+  max-height: 150%;
+  height: auto;
+  filter: grayscale(100%) brightness(1.5); /* Logos en blanco y negro y más brillantes */
+  transition: filter 0.3s;
+  object-fit: contain;
+}
+
+.slider .slide:hover img {
+  filter: grayscale(0%) brightness(1); /* Color original al pasar el mouse */
+}
+#contacto h1{
+  text-shadow: 6px 4px 7px black;
+}
+
+.form-control{
+  line-height: 1.7;
+
+}
+
+#contacto .btn-kaisen{
+  font-weight: 700;
+  font-size:1.2em;
+  letter-spacing: 1px;
+  background-color: #0D2242; 
+  color: #ffffff; 
+  padding: .2rem 2rem; 
+ 
+}
+
+.g-recaptcha {
+  transform: scale(0.85); /* Ajusta este valor según el tamaño deseado */
+  transform-origin: 0 0; /* Asegura que el origen del escalado sea desde la esquina superior izquierda */
+}
+
+/*WhatsApp Btn*/
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  left: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 60px;
+  text-align: center;
+  padding-top: 7px;
+  font-size: 30px;
+  z-index: 100;
+}
+
+.float:hover {
+  background-color: #fff;
+  color: #25d366;
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+/*========== FOOTER ========= */
+#footer{ 
+  position: relative;
+  height: auto;
+}
+
+.footer-background-img {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover; /* Esto hace que la imagen cubra todo el contenedor */
+    z-index: -1; /* La pone detrás del texto */
+  
+}
+.footer-logo {
+  height: clamp(4rem, 12vw, 5rem);
+  width: auto; 
+}
+
+.nav-link-f {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: .8rem;
+  color: rgb(255, 255, 255);
+  transition: color 0.4s;
+  text-decoration: none;
+}
+
+#footer h5{
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+}
+
+.copyright{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+
+
+/* Estilos para el navbar cuando se hace scroll */
+.scroll-header {
+  position: fixed; /* Fija el navbar en la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95); /* Un fondo oscuro semitransparente */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque para el fondo (opcional) */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra para darle profundidad */
+  z-index: 1000; /* Asegura que esté por encima de todo */
+  transition: background-color 0.4s, box-shadow 0.4s; /* Transición suave */
+  margin-top: 0; /* Quita el margen superior que tenía originalmente */
+  padding: 0.5rem 0; /* Un padding más pequeño para la versión fija */
+}
+
+.scroll-header .nav-link {
+  color: #0D2242; /* Color oscuro principal */
+}
+.scroll-header .navbar-logo.logo-white
+ {
+  display: none;
+}
+.scroll-header .navbar-logo.logo-normal {
+  display: block;
+}
+.navbar-logo.logo-normal {
+  display: none;
+}

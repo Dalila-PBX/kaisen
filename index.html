@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <!-- metadatos -->
+  <meta charset="UTF-8">
+  <meta name="description" content="Pagina Web Kaisen Empresarial">
+  <meta name="keywords" content="Kaisen, Capital Humano, Reclutamiento, Seleccion de personal, Capacitacion">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--=============== FAVICON  ===============-->
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+
+  <!--=============== TITULO ==================-->
+  <title>Kaisen Empresarial</title>
+
+  <!-- =============BOOTSTRAP =================-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!--============== ICONOS ===================-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!--=============== ESTILOS ===================-->
+  <link rel="stylesheet" href="dist/css/style.css">
+  <link rel="stylesheet" href="dist/css/normalize.css">
+
+  <!--================= FONTS ===================-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!--================= AOS ===================-->
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+</head>
+
+<body>
+  <!--=============== HEADER ===============-->
+  <header class="header" id="header">
+    <picture>
+      <!-- Si la pantalla es de 992px o más, usa la imagen de escritorio -->
+      <source media="(min-width: 992px)" srcset="images/banners-adaptados/banner-inicio.png">
+
+      <!-- Por defecto (móvil), usa esta otra imagen -->
+      <source media="(max-width: 576px)" srcset="images/banners-adaptados/banner_720x1024.png">
+
+      <!-- Imagen de respaldo y el elemento que se va a estilizar -->
+      <img src="images/banners-adaptados/banner-inicio.png" alt="Banner principal" class="header-background-img">
+
+    </picture>
+
+    <!-- Contenedor para todo el contenido superpuesto -->
+    <div class="header-content container">
+      <!--========= NAVBAR ============-->
+      <nav class="navbar navbar-expand-lg navbar-dark" id="navbar" aria-label="Fourth navbar example">
+        <div class="container">
+          <!--contenedor que ocupa el 100% del ancho disp-->
+          <a class="nav__logo" href="#section-inicio">
+            <img src="images/logo2.png" alt="Logo Kaisen" class="navbar-logo logo-white" />
+            <img src="images/logonormal.png" alt="Logo Kaisen" class="navbar-logo logo-normal" />
+          </a>
+          <!--boton hamburguesa-->
+          <!--data-bs-toogle="colapse": le dice al js de B que ese boton debe mostrar/ocultar otro elem
+              data-bs-target: especifica que elem debe mostr/ocult -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+            aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExample04">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <!--me-auto empuja los enlaces hacia la izq, dej espacio a la der, pero quiero a la izq como le hago -->
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#section-inicio">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#servicios">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#clientes">Clientes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+
+      <!--=============== HERO  ===============-->
+      <section class="home section" id="section-inicio">
+        <div class="container">
+          <div class="home__data" data-aos="fade-down" data-aos-duration="2500">
+            <h1 class="home__title">Mas de 12 años de <br> experiencia en <br>Capital Humano</h1>
+            <p class="home__description">
+              Facilitamos tus procesos de RH con soluciones <br>en Reclutamiento, Nómina y Capacitación
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!--=============== SOBRE NOSOTROS  ===============-->
+    <section id="about" class="container px-4 py-5">
+      <div class="row justify-content-center  g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6" data-aos="fade-right" data-aos-duration="2500">
+          <img src="images/people-using-digital-device-while-meeting.jpg" class="d-block mx-lg-auto img-fluid"
+            alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6 about__content" data-aos="fade-left" data-aos-duration="2500">
+          <h1 class="display-4 fw-bold text-body-emphasis lh-1 mb-3">Kaisen Empresarial</h1>
+          <p class="lead">Somos una empresa de Capital Humano, con más de 12 años de experiencia especializada en
+            personal Administrativo de confianza. Contamos con expertos en Reclutamiento, Maquila de Nómina y
+            Capacitación que facilitan a nuestros clientes sus procesos en el área de RH.</p>
+        </div>
+      </div>
+    </section>
+    <!--=============== SERVICIOS  ===============-->
+    <section id="servicios" class="container py-5 py-md-8">
+      <div class="servicios__container" data-aos="fade-down" data-aos-duration="2500">
+        <h1 class="display-4 fw-bold text-black text-center">Nuestros Servicios</h1>
+        <!-- 2. Fila para las tarjetas -->
+        <div class="row justify-content-center">
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card service-card h-100">
+              <img src="images/RECLUTAMIENTO_ICONO.png" class="card-img-top" alt="Icono de Reclutamiento y Selección">
+              <div class="card-body">
+                <h5 class="card-title">Reclutamiento y Selección de personal</h5>
+                <p class="card-text">Reclutamiento y selección de personal de confianza con el perfil más adecuado en base
+                  a técnicas avanzadas y tecnología para Capital Humano.</p>
+                <a href="https://wa.link/ekslcs" class="btn btn-kaisen mt-auto" target="_blank">Más Info</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card service-card h-100">
+              <img src="images/ESTUDIOS_ICONO.png" class="card-img-top" alt="Icono de Maquila de Nómina">
+              <div class="card-body">
+                <h5 class="card-title">Estudios Socioeconómicos</h5>
+                <p class="card-text">Apoyo para conocer si el candidato cuenta con las aptitudes y conocimientos
+                  requeridos para el puesto.</p>
+                <a href="https://wa.link/ekslcs" class="btn btn-kaisen mt-auto" target="_blank">Más Info</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card service-card h-100">
+              <img src="images/MAQUILA_ICONO.png" class="card-img-top" alt="Icono de Capacitación">
+              <div class="card-body">
+                <h5 class="card-title"><br>Maquila de Nómina <br></h5>
+                <p class="card-text">Procesamos la nómina semanal, quincenal o mensual de tu Capital Humano.</p>
+                <a href="https://wa.link/ekslcs" class="btn btn-kaisen mt-auto" target="_blank">Más Info</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card service-card h-100">
+              <img src="images/CAPACITACION_ICONO.png" class="card-img-top" alt="Icono de Consultoría">
+              <div class="card-body">
+                <h5 class="card-title"><br>Capacitación<br></h5>
+                <p class="card-text">Detectamos las necesidades de capacitación para potencializar a tu personal.</p>
+                <a href="https://wa.link/ekslcs" class="btn btn-kaisen mt-auto" target="_blank">Más Info</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--=============== CLIENTES   ===============-->
+    <section class="clientes" id="clientes">
+      <picture>
+        <!-- Si la pantalla es de 992px o más, usa la imagen de escritorio -->
+        <source media="(min-width: 992px)" srcset="images/FONDO_SERVICIOS.png">
+
+        <!-- Por defecto (móvil), usa esta otra imagen -->
+        <source media="(max-width: 576px)" srcset="images/banners-adaptados/FONDO_SERVICIOS_720x1024.png">
+
+        <!-- Imagen de respaldo y el elemento que se va a estilizar -->
+        <img src="images/FONDO_SERVICIOS.png" alt="Banner principal" class="clientes-background-img">
+
+      </picture>
+
+      <!-- Contenedor para todo el contenido superpuesto -->
+      <div class="container py-5 py-md-8">
+        <div class="row">
+          <div class="col-lg-12 text-center ">
+            <h1 class="display-4 fw-bold text-white ">Nuestros Clientes</h1>
+          </div>
+        </div>
+
+        <!-- Carrusel de logos -->
+        <div class="slider">
+          <div class="slide-track">
+            <!-- Logos originales -->
+            <div class="slide">
+              <img src="images/FORZA_LOGO.png" alt="Logo Forza" />
+            </div>
+            <div class="slide">
+              <img src="images/WELLDEX_LOGO.png" alt="Logo Welldex" />
+            </div>
+            <div class="slide">
+              <img src="images/CONAGRA_LOGO.png" alt="Logo Conagra" />
+            </div>
+            <div class="slide">
+              <img src="images/FEMSA_LOGO.png" alt="Logo Femsa" />
+            </div>
+            <!-- Logos duplicados para el efecto de bucle -->
+            <div class="slide">
+              <img src="images/FORZA_LOGO.png" alt="Logo Forza" />
+            </div>
+            <div class="slide">
+              <img src="images/WELLDEX_LOGO.png" alt="Logo Welldex" />
+            </div>
+            <div class="slide">
+              <img src="images/CONAGRA_LOGO.png" alt="Logo Conagra" />
+            </div>
+            <div class="slide">
+              <img src="images/FEMSA_LOGO.png" alt="Logo Femsa" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!--=============== OPINIONES  ===============-->
+
+    <section id="opiniones">
+      <div class="container py-5 opiniones__content" data-aos="fade-down" data-aos-duration="2500">
+        <h1 class="display-4 fw-bold text-black text-center">Lo que opinan nuestros clientes</h1>
+        <!-- 2. Fila para las tarjetas -->
+        <div class="row justify-content-center g-lg-5 ">
+
+          <div class="col-lg-4 col-12 mb-4 ">
+            <div class="card testimonial-card h-100 p-4">
+              <img src="images/CONAGRA_IMAGEN.png" class="testimonial-img" alt="Icono de Reclutamiento y Selección">
+              <div class="card-body">
+                <p class="card-text">La atención y tiempo de respuesta para cubrir vacantes es muy eficiente. <br></p>
+                <p class="marcas">conagra</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-12 mb-4">
+            <div class="card testimonial-card h-100 p-4">
+              <img src="images/WELLDEX_IMAGEN.png" class="testimonial-img" alt="Icono de Maquila de Nómina">
+              <div class="card-body">
+                <p class="card-text">Son nuestro aliado para cubrir posiciones estratégicas. <br><br></p>
+                <p class="marcas">welldex</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-12 mb-4">
+            <div class="card testimonial-card h-100 p-4">
+              <img src="images/IPP.png" class="testimonial-img" alt="Icono de Capacitación">
+              <div class="card-body">
+                <p class="card-text">Sus herramientas de reclutamiento ayudan a que puedan seleccionar bien al candidato.
+                </p>
+                <p class="marcas">ipp plastic</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!--=============== CONTACTO  ===============-->
+    <section class="contacto" id="contacto">
+
+      <picture>
+        <!-- Si la pantalla es de 992px o más, usa la imagen de escritorio -->
+        <source media="(min-width: 992px)" srcset="images/banners-adaptados/CONTACTO_FONDO_1920x1080.png">
+
+        <!-- Por defecto (móvil), usa esta otra imagen -->
+        <source media="(max-width: 576px)" srcset="images/banners-adaptados/CONTACTO_FONDO_720x1024.png">
+
+        <!-- Imagen de respaldo y el elemento que se va a estilizar -->
+        <img src="images/banners-adaptados/CONTACTO_FONDO_1920x1080.png" alt="Banner principal"
+          class="contacto-background-img">
+
+      </picture>
+      <!-- Contenedor para todo el contenido superpuesto -->
+      <div class="container py-5">
+        <div class="row  justify-content-center align-items-center g-4">
+
+
+          <div class="col-lg-5 text-center  text-lg-start contacto__izq" data-aos="fade-right" data-aos-duration="2500">
+            <h1 class="display-4 fw-bold text-white">Contacto</h1>
+          </div>
+
+          <div class="col-lg-7  ">
+            <form class="row g-3 contacto__der" action="enviar.php" method="POST" data-aos="fade-left"
+              data-aos-duration="2500">
+              <div class="col-12">
+                <input type="text" class="form-control" id="validationServer01" placeholder="Nombre" name="nombre"
+                  required>
+              </div>
+
+              <div class="col-12">
+                <input type="tel" class="form-control" id="telefono" placeholder="Teléfono" name="telefono" required>
+              </div>
+
+              <div class="col-12">
+                <select class="form-select" id="validationServer04" aria-describedby="validationServer04Feedback"
+                  name="servicio" required>
+                  <option selected disabled value="">Servicio</option>
+                  <option>Reclutamiento de Personal</option>
+                  <option>Estudios Socioeconómicos</option>
+                  <option>Maquila de Nómina</option>
+                  <option>Capacitación</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <input type="email" class="form-control" id="exampleFormControlInput1" name="correo" placeholder="Correo">
+              </div>
+
+              <div class="captcha-wrapper">
+                <div class="g-recaptcha" data-sitekey="6LdUPQgsAAAAAEgneOSe3Wev99T-ySxEhpqVnf6p"></div>
+                <!--clave del sitio-->
+              </div>
+
+              <div class="col-12 text-center">
+                <button class="btn btn-kaisen" type="submit">Enviar Formulario</button>
+              </div>
+            </form>
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+
+      <a href="https://wa.link/ekslcs" class="float" target="_blank">
+        <i class="bi bi-whatsapp my-float"></i>
+      </a>
+    </section>
+  </main>
+
+  <!--=============== FOOTER  ===============-->
+  <section class="footer" id="footer">
+    <picture>
+      <!-- Si la pantalla es de 992px o más, usa la imagen de escritorio -->
+      <source media="(min-width: 992px)" srcset="images/banners-adaptados/footer_fondo_1920x1080.png">
+
+      <!-- Por defecto (móvil), usa esta otra imagen -->
+      <source media="(max-width: 576px)" srcset="images/banners-adaptados/FOOTER_FONDO_720x1024.png">
+
+      <!-- Imagen de respaldo y el elemento que se va a estilizar -->
+      <img src="images/banners-adaptados/footer_fondo_1920x1080.png" alt="Banner principal"
+        class="footer-background-img">
+
+    </picture>
+
+    <div class="container text-white">
+      <footer class="row py-5 px-4 justify-content-center align-items-center">
+
+        <!-- Columna 1: Logo y Copyright -->
+        <div class="col-lg-4 col-md-12 mb-4  text-center text-lg-start">
+          <a href="#" class="d-inline-block mb-3 text-decoration-none">
+            <img src="images/logo2.png" alt="Logo Kaisen" class="footer-logo">
+          </a>
+
+        </div>
+
+        <!-- Columna 2: Enlaces -->
+        <div class="col-lg-4 col-md-12 mb-4">
+          <h5 class="fw-bold mb-3"></h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#section-inicio" class="nav-link p-0 ">Inicio</a></li>
+            <li class="nav-item mb-2"><a href="#about" class="nav-link p-0 ">Nosotros</a></li>
+            <li class="nav-item mb-2"><a href="#servicios" class="nav-link p-0 ">Servicios</a></li>
+            <li class="nav-item mb-2"><a href="#clientes" class="nav-link p-0 ">Clientes</a></li>
+            <li class="nav-item mb-2"><a href="#contacto" class="nav-link p-0 ">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Contacto -->
+        <div class="col-lg-4 col-md-12 mb-4">
+          <h5 class="fw-bold mb-3">CONTÁCTANOS</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="https://wa.link/ekslcs" class="nav-link-f p-0 text-white d-flex align-items-center">
+                <i class="bi bi-whatsapp me-2 fs-6"></i>
+                +52 449 928 9583
+              </a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="tel:+524491901760" class="nav-link-f p-0 text-white d-flex align-items-center">
+                <i class="bi bi-telephone-fill me-2 fs-6"></i>
+                +52 449 190 1760
+              </a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="mailto:comercial@kaisenempresarial.com"
+                class="nav-link-f p-0 text-white d-flex align-items-center">
+                <i class="bi bi-envelope-fill me-2 fs-6"></i>
+                comercial@kaisenempresarial.com
+              </a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="https://maps.app.goo.gl/eUquupjjwur68WSg6" target="_blank"
+                class="nav-link-f p-0 text-white d-flex align-items-start">
+                <i class="bi bi-geo-alt-fill me-2 fs-6"></i>
+                <span>Potreros 801 Villas de San Nicolás, Aguascalientes</span>
+              </a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <div>
+              <a href="#" class="text-white-50 me-2">
+                <i class="bi bi-facebook fs-2"></i>
+              </a>
+            </div>
+            <div>
+              <a href="https://www.linkedin.com/company/kaizen-empresarial-m%C3%A9xico/?viewAsMember=true"
+                class="text-white-50" target="_blank">
+                <i class="bi bi-linkedin fs-2"></i>
+              </a>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+        <p class="text-white text-center copyright">© 2025 Todos los derechos reservados por Kaisen Empresarial |
+          Diseñado por luminel.</p>
+
+      </footer>
+
+    </div>
+
+  </section>
+
+
+
+
+  <!-- Script Captcha -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <!--Animaciones-->
+  <script src="dist/js/scrollreveal.min.js"></script>
+
+  <!-- Animaciones AOS -->
+
+
+  <!-- Script Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+  </script>
+  <!--AOS -->
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script> -->
+  <!-- Main JS -->
+  <script src="dist/js/main.js"></script>
+</body>
+
+</html>
